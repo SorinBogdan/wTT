@@ -1,6 +1,9 @@
 <html>
 	<head>
 		<style type = "text/css">
+			body {
+				white-space:nowrap;
+			}
 			div {
 				background-image: url('style/grass.png');
 				width: 64px;
@@ -8,14 +11,9 @@
 				display: inline-block;
 				position: relative;
 			}
-			.p_n_1 {
-				
-			}
 			.p_n {
-				top: -15px;
 			}
 			.p_r {
-				top: -30px;
 				left: 31px;
 			}
 		</style>
@@ -31,7 +29,7 @@
 			
 			$p = array();
 			for ($y = 1; $y<=100; $y++)
-				for ($x = 1; $x <= 17; $x++)
+				for ($x = 1; $x <= 100; $x++)
 				{
 					$p [$y] [$x] ['t'] = "grass";
 					$p [$y] [$x] ['o'] = "0";
@@ -40,13 +38,11 @@
 			{
 				if ($y % 2 == 0)
 					$a = "p_r";
-				else if ($y == 1 && !($y%2))
-					$a = "p_n_1";
 				else
 					$a = "p_n";
-				for ($x = 1; $x <= 17; $x++)
+				for ($x = 1; $x <= 100; $x++)
 				{
-					echo '<div class = "'.$a.'"></div>';
+					echo '<div class = "'.$a.'" style = "top: -'.($y*15).'px; left: '.($y*31).'px;"></div>';
 				}
 				echo '<br>';
 			}

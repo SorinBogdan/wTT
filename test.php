@@ -1,27 +1,20 @@
 <html>
 	<head>
 		<style type = "text/css">
-			.p_n_1 {
+			div {
 				background-image: url('style/grass.png');
 				width: 64px;
 				height: 31px;
 				display: inline-block;
 				position: relative;
 			}
+			.p_n_1 {
+				
+			}
 			.p_n {
-				background-image: url('style/grass.png');
-				width: 64px;
-				height: 31px;
-				display: inline-block;
-				position: relative;
 				top: -15px;
 			}
 			.p_r {
-				background-image: url('style/grass.png');
-				width: 64px;
-				height: 31px;
-				display: inline-block;
-				position: relative;
 				top: -30px;
 				left: 31px;
 			}

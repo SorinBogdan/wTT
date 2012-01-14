@@ -25,6 +25,9 @@
 								<td>Price:</td>
 								<td><input type = "text" maxlength = "5" name = "g_price"></td>
 							<tr>
+								<td>Premium:</td>
+								<td><input type = "checkbox" name = "g_premium" value = "1"></td>
+							<tr>
 								<td>Max number of players:</td>
 								<td><input type = "text" maxlength = "2" name = "g_max"></td>
 							<tr>
@@ -47,6 +50,7 @@
 				case 'g_det':
 					$_SESSION['g_name'] = $_POST['g_name'];
 					$_SESSION['g_price'] = $_POST['g_price'];
+					$_SESSION['g_premium'] = ($_POST['g_premium'] == 1) ? 1 : 0;
 					$_SESSION['g_max'] = $_POST['g_max'];
 					$_SESSION['g_x'] = $_POST['g_x'];
 					$_SESSION['g_y'] = $_POST['g_y'];
@@ -114,7 +118,7 @@
 				break;
 				case 'add':
 					
-					$query = "INSERT INTO `t_maps` (name, price, max, x, y) VALUES ('".$_SESSION['g_name']."', ".$_SESSION['g_price'].", ".$_SESSION['g_max'].", ".$_SESSION['g_x'].", ".$_SESSION['g_y'].")";
+					$query = "INSERT INTO `t_maps` (name, price, premium, max, x, y) VALUES ('".$_SESSION['g_name']."', ".$_SESSION['g_price'].", ".$_SESSION['g_premium'].", ".$_SESSION['g_max'].", ".$_SESSION['g_x'].", ".$_SESSION['g_y'].")";
 					$result = mysql_query($query, $link);
 					if (!$result)
 						die ('Cannot add map');

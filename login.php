@@ -23,16 +23,16 @@
 			mysql_query($query, $link);
 			$_SESSION['money'] = 2500.0;
 			$_SESSION['exp'] = 0;
-			$_SESSION['rank'] = "user";
 			$_SESSION['lvl'] = 0;
+			$_SESSION['rank'] = "user";
 		}
 		else
 		{
 			$row = mysql_fetch_array($result);
 			$_SESSION['money'] = $row['money'];
 			$_SESSION['exp'] = $row['exp'];
-			$_SESSION['rank'] = $row['rank'];
 			$_SESSION['lvl'] = $row['lvl'];
+			$_SESSION['rank'] = $row['rank'];
 		}
 		$_SESSION['uid'] = $user_profile['id'];
 		$_SESSION['name'] = $user_profile['name'];

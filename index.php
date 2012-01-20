@@ -1,6 +1,7 @@
 <?php
 	include 'inc/config.php';
 	include 'inc/fb_get.php';
+	include 'inc/main.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,11 +18,12 @@
 				<a href = "index.php">Home</a> | 
 				<a href = "faq.php">FAQ</a> | 
 				<a href = "about.php">About</a> | 
-				<?php if ($_SESSION['logat']): ?>
+				<?php if (isset($_SESSION['logat']) && $_SESSION['logat']): ?>
 					<a href = "profile.php">Profile</a> | 
 					<a href = "map.php">Map</a> | 
-					<a href = "top.php">Top</a> | 
-					<a href = "<?php echo $logoutUrl; ?>">Logout</a>
+					<a href = "friends.php">Friends</a> | 
+					<a href = "tickets.php">Tickets</a> | 
+					<a href = "logout.php">Logout</a>
 				<?php else: ?>
 					<a href = "login.php">Login</a>
 				<?php endif ?>
@@ -29,6 +31,7 @@
 			<div class = "container">
 				<div class = "profile">
 					<?php if ($_SESSION['logat']): ?>
+						<?php getUserInfo($link); ?>
 						<table>
 							<tr>
 								<td>Name:</td>

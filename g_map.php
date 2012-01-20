@@ -4,6 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title></title>
+		<link rel="stylesheet" type="text/css" href="style/s.css" />
 		<link rel="stylesheet" type="text/css" href="style/map.css" />
     </head>
     <body>
@@ -67,10 +68,9 @@
 								<td><a href = "g_map.php">Start over</a></td>
 						</table>
 					</div>
-					<br/><br/><br/><br/><br/><br/>
 					
-					<div class="main">
-					<div class="map">
+					<div class="main" style = "width: <?php echo $_SESSION['g_x']*40+$_SESSION['g_x']*16.5;?>px; height: <?php echo $_SESSION['g_y']*40+$_SESSION['g_y']*16.5?>;">
+					<div class="map" style = "width: <?php echo $_SESSION['g_x']*40;?>px; height: <?php echo $_SESSION['g_y']*40?>;" >
 					<?php
 						function probabilitate($sansa, $din = 100) {
 							$random = mt_rand(1, $din);
@@ -105,14 +105,16 @@
 					</div>
 					</div>
 					<?php
+					$_SESSION['pt'] = $pt;
 					// afisare array pentru test
 						/*for($y = 1; $y <= $_SESSION['g_y']; $y++)
 						{
 							for($x = 1; $x <= $_SESSION['g_x']; $x++)
 							   {
-									echo "y: ".$y." x: ".$x." type: ".$pt [$y] [$x] ['t']." owner: ".$pt[$y][$x]['o']."<br>";
+									echo "y: ".$y." x: ".$x." type: ".$_SESSION['pt'] [$y] [$x] ['t']." owner: ".$_SESSION['pt'][$y][$x]['o']."<br>";
 								}
 						}*/
+						
 					?>
 				<?php 
 				break;
@@ -136,11 +138,11 @@
 					{
 						for($x = 1; $x <= $_SESSION['g_x']; $x++)
 							{
-								$query = "INSERT INTO `t_".$_SESSION['g_name']."` (y, x, t, o) VALUES ('".$y."', '".$x."', '".$pt [$y] [$x] ['t']."', '".$pt [$y] [$x] ['o']."')";
+								$query = "INSERT INTO `t_".$_SESSION['g_name']."` (y, x, t, o) VALUES ('".$y."', '".$x."', '".$_SESSION['pt'] [$y] [$x] ['t']."', '".$_SESSION['pt'] [$y] [$x] ['o']."')";
 								$result = mysql_query($query, $link);
 							}
 					}
-					echo 'Done';
+					echo 'Done <meta http-equiv="refresh" content="2; url=g_map.php">';
 				break;
 			}
 		}

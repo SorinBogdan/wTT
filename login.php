@@ -14,7 +14,7 @@
 	{
 		$_SESSION['logat'] = true;
 		// Check if user exists in the database
-		$query = "SELECT * FROM `t_users` WHERE id='".$user_profile['id']."'";
+		$query = "SELECT * FROM `t_users` WHERE userid='".$user_profile['id']."'";
 		$result = mysql_query($query, $link);
 		$status = (mysql_num_rows($result) != 1) ? true : false; // true - new user ; false - user exists
 		$_SESSION['uid'] = $user_profile['id'];

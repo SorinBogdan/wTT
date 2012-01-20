@@ -9,6 +9,14 @@ div.cell {
     background: url(grass.png) ;
 }
 
+div.cell1 {
+    width: 40px ;
+    height: 40px ;
+    float: left ;
+    background: url(grass_2.jpg) ;
+}
+
+
 div.map {
 	-webkit-transform:rotate(45deg);
 	-o-transform:rotate(45deg);

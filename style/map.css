@@ -1,45 +1,42 @@
 body {
-                background-color: #000 ;
-            }
-            
-            div.cell {
-                width: 40px ;
-                height: 40px ;
-                float: left ;
-                background: url(style/grass.png) ;
-            }
-            
-            div.map {
+background-color: #000;
+color: white;
+}
+div.cell {
+    width: 40px ;
+    height: 40px ;
+    float: left ;
+    background: url(grass.png) ;
+}
 
-                -webkit-transform:rotate(45deg);
-                -o-transform:rotate(45deg);
-                -moz-transform:rotate(45deg);
-                -ms-transform:rotate(45deg);
-                margin: 0px auto;
-            }
-            
-            div.main {
+div.map {
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    margin: auto;
+}
+ 
+div.main {
+    -webkit-transform:rotateX(60deg);
+    -o-transform:rotateX(60deg);
+    -moz-transform:rotateX(60deg);
+    -ms-transform:rotateX(60deg);
+    margin: auto;
+}
+  
+div.content {
+    width: 20px ;
+    height: 20px ;
+    -webkit-transform:rotate(135deg);
+    margin-left: 8px ;
+    margin-top: 8px ;
+}
 
-                -webkit-transform:rotateX(60deg);
-                -o-transform:rotateX(60deg);
-                -moz-transform:rotateX(60deg);
-                -ms-transform:rotateX(60deg);
-                margin: 0px auto;
-            }
-            
-            div.content {
-                width: 20px ;
-                height: 20px ;
-                -webkit-transform:rotate(135deg);
-                margin-left: 8px ;
-                margin-top: 8px ;
-                
-            }
-            
-            div.content1 {
-                -webkit-transform:rotate(180deg);
-            }
-            
-            img {
-                -webkit-transform:rotateX(0deg);
-            }
+div.content1 {
+    -webkit-transform:rotate(180deg);
+}
+ 
+img {
+    -webkit-transform:rotateX(0deg);
+}

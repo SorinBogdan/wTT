@@ -1,0 +1,32 @@
+.menu {
+	width: 402px;
+	height: 20px;
+	background-color: gray;
+	text-align: center;
+	margin: auto;
+}
+
+.item {
+	height: 14px;
+	position: relative;
+	margin: 10px auto;
+	cursor: pointer;
+}
+
+.item:hover {
+	background-color: lightgrey;
+}
+
+.box {
+	border:1px solid;
+	border-radius: 0px 0px 25px 25px;
+	display: none;
+	background-color: darkgrey;
+	width: 400px;
+	height: 200px;
+	
+}
+table {
+	text-align: center;
+	margin: 20px auto;
+}

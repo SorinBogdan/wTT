@@ -25,3 +25,20 @@
 .content {
 
 }
+
+.g_madd {
+	float:top;
+	position:fixed;
+}
+
+.cont {
+	background-color: #000;;
+	width: 660px;
+}
+
+.f_box{
+	background-color: light-grey;
+	width: 200px;
+	display: block;
+	margin: 15px 10px;
+}

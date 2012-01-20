@@ -15,7 +15,8 @@
 			else
 			$info = mysql_fetch_array($result1);
 		?>
-			
+			<?php include 'inc/map_menu.php'; ?>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<div class="main" style = "width: <?php echo $info['x']*40+$info['x']*16.5;?>px; height: <?php echo $info['y']*40+$info['y']*16.5?>;">
 			<div class="map" style = "width: <?php echo $info['x']*40;?>px; height: <?php echo $info['y']*40?>;" >
 		<?php
